@@ -1,0 +1,29 @@
+<mat-card class="example-card">
+    <mat-card-header >
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title style="padding-left: 50px;" >Angular  Role Based Auth Example</mat-card-title>
+      <mat-card-subtitle><b>Dusa Demo</b> </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Username</mat-label>
+              <input type="email" matInput  formControlName="username" placeholder="username">
+              <mat-error *ngIf="loginForm.get('username').hasError('required') && loginForm.get('username').touched">
+                Please enter a valid Username address
+              </mat-error>
+             </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput  formControlName="password" placeholder="password">
+                <mat-error *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+                  Please enter a valid password
+                </mat-error>
+             </mat-form-field>
+              <mat-card-actions>
+                <button  mat-raised-button color="primary" type="submit">Login</button>
+            </mat-card-actions>
+          </form>
+    </mat-card-content>
+   
+  </mat-card>

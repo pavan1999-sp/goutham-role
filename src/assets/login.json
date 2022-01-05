@@ -1,0 +1,16 @@
+{
+    "login":[
+        {
+            "userName":"user",
+            "password":"user@123",
+            "fullName":"user",
+            "role":"user"
+        },
+        {
+            "userName":"admin",
+            "password":"admin@123",
+            "fullName":"admin",
+            "role":"admin"
+        }
+    ]
+}
